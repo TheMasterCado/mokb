@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resource :auth, only: [], controller: :auth do
+    post 'token'
+    delete 'token', to: 'destroy'
+  end
 end
